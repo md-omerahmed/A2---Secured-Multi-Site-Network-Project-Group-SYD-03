@@ -1,4 +1,4 @@
-# WEEK 5
+# WEEK 5 CLasswork
 
 <img width="1919" height="1079" alt="Screenshot 2026-08-12 114513" src="https://github.com/user-attachments/assets/0d91e167-bcbe-4f0d-9cdb-fb010967dea7" />
 <img width="1919" height="1079" alt="Screenshot 2026-08-12 114919" src="https://github.com/user-attachments/assets/40c285cb-c2a9-442c-9e79-d4af9c97d7a1" />
