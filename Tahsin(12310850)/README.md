@@ -58,7 +58,7 @@
 # Demo Topology of Group Assesment
 <img width="1920" height="1080" alt="{01D8856A-66F3-479E-9501-51DD22B07997}" src="https://github.com/user-attachments/assets/096a56eb-bcb0-4c2d-9ab4-8bc7517f4ace" />
 
-<img width="940" height="581" alt="image" src="https://github.com/user-attachments/assets/db7ea4fe-349e-4685-b857-238f3582503e" />
+
 <img width="940" height="516" alt="image" src="https://github.com/user-attachments/assets/0153edc3-8599-4ce6-b85f-ecc965fb14f7" />
 <img width="940" height="677" alt="image" src="https://github.com/user-attachments/assets/8031467d-a981-4c20-b4e6-7964a367c481" />
 
