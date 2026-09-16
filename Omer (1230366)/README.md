@@ -1,4 +1,4 @@
-# WEEK 5 CLasswork
+# Assessment 2 (1)
 
 <img width="1919" height="1079" alt="Screenshot 2026-08-12 114513" src="https://github.com/user-attachments/assets/0d91e167-bcbe-4f0d-9cdb-fb010967dea7" />
 <img width="1919" height="1079" alt="Screenshot 2026-08-12 114919" src="https://github.com/user-attachments/assets/40c285cb-c2a9-442c-9e79-d4af9c97d7a1" />
@@ -11,7 +11,7 @@
 <img width="1919" height="1076" alt="Screenshot 2026-08-12 122304" src="https://github.com/user-attachments/assets/002fffda-8e80-428b-8395-34c1ba41b399" />
 <img width="1919" height="1079" alt="Screenshot 2026-08-12 123129" src="https://github.com/user-attachments/assets/dd8a5abd-ab80-4531-90ab-3b3e7df13042" />
 
-# WEEK 6 CLasswork
+# Assessment 2 (2)
 <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/6278c4e5-b38d-484d-86c2-4a7ab53393a4" />
 <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/963976b9-9e38-4bbd-8e3c-f8c5d376a3c4" />
 <img width="940" height="558" alt="image" src="https://github.com/user-attachments/assets/633179bd-cd20-4ffa-95ed-c02df5e9dda2" />
