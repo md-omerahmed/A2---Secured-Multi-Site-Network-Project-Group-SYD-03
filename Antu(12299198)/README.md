@@ -31,10 +31,14 @@ The /etc/hosts file on the Kerberos client was configured with static mappings f
 <img width="652" height="358" alt="image" src="https://github.com/user-attachments/assets/710c76db-e339-4900-b705-78789ac66b9a" />
 # Task 8 – Kerberos Network Connectivity Verification
 Connectivity and hostname resolution were verified from the Kerberos client. The client successfully resolved and pinged kdc.example.com at 10.10.1.10 and server1.example.com at 10.10.1.20, with 0% packet loss. This confirms that the three Kerberos systems can communicate using their fully qualified domain names.
+
 <img width="675" height="532" alt="image" src="https://github.com/user-attachments/assets/6b2ca6f0-ef87-462b-b5eb-475fc885adb8" />
+
 # Task 9 – Kerberos Realm Verification
 The Kerberos configuration was verified using /etc/krb5.conf. The system is configured to use the EXAMPLE.COM realm, which will be shared by the Kerberos clients and servers.
+
 <img width="680" height="655" alt="image" src="https://github.com/user-attachments/assets/02af7daf-ce10-4a0e-aa41-e12ef966594b" />
+
 # Task 10 – Kerberos KDC Alias Configuration
 The KDC hostname mapping was updated so that kerberos.example.com, which is referenced by the Kerberos configuration, resolves to the KDC address 10.10.1.10. The getent hosts kerberos.example.com command confirmed successful hostname resolution.
 <img width="669" height="701" alt="image" src="https://github.com/user-attachments/assets/e315fc98-508a-4e97-b638-9c4eeb8d0e24" />
