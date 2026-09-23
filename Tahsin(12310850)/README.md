@@ -75,7 +75,14 @@
 <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/1e1a0b87-f77f-4f2b-bd1a-4bc6e54cb029" />
 # Figure 4 – OPNsense Firewall Live Log:
 ## This screenshot shows the OPNsense firewall live log, providing evidence of allowed and blocked traffic generated during firewall testing.
-<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/07b23289-47fe-47dd-982b-930fb4ffe96c" />
+<img width="840" height="624" alt="image" src="https://github.com/user-attachments/assets/5717ecb0-872f-4a27-a537-bfd083bdba56" />
+
+# WAN Firewall Rule:
+## This screenshot shows the OPNsense WAN firewall rule configured to allow IPv4 TCP/HTTP traffic on port 80 to the DMZ_WEBSERVER, while other unmatched WAN traffic remains blocked by default.
+<img width="1003" height="742" alt="image" src="https://github.com/user-attachments/assets/899de83c-8074-44ef-9b55-ec8af89b7b2e" />
+# DMZ (OPT1) Firewall Rules:
+## This screenshot shows the OPNsense DMZ (OPT1) firewall rules, allowing DNS traffic on port 53 from the DMZ_NET while blocking other unmatched IPv4 traffic to restrict access from the DMZ.
+<img width="852" height="670" alt="image" src="https://github.com/user-attachments/assets/0cd600f4-e012-4447-9560-aa923cc57f94" />
 
 # Figure 5Firewall Blocking Evidence:
 ## This screenshot shows the OPNsense firewall live log confirming that ICMP traffic from the LAN host (10.10.3.10) to 10.11.3.10 was blocked by the firewall.
