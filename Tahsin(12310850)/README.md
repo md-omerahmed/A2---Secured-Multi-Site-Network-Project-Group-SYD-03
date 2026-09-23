@@ -1,4 +1,4 @@
-# Week-5 Class Work
+
 
 <img width="940" height="500" alt="image" src="https://github.com/user-attachments/assets/012e63ad-8d8b-47b1-9fa1-fbb24208af62" />
 
@@ -11,7 +11,7 @@
 
 
 
-# Week-6 Class Work
+
 <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/1af3e4aa-0bbc-4264-83d3-6df82e5901e7" />
 
 <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/a375d81e-e37a-4f37-8493-f5dae6a046b6" />
@@ -43,7 +43,7 @@
 
 
 
-# Week-8 Class work
+
 
 # Topology
 <img width="1920" height="1080" alt="{C831F2EB-4318-456B-80B5-3789267F9B42}" src="https://github.com/user-attachments/assets/0d8b152f-3235-4c33-8a49-659b789e3499" />
