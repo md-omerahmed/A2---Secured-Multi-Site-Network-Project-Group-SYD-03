@@ -43,7 +43,7 @@
 
 
 
-
+# Project Work
 
 # Topology
 <img width="1920" height="1080" alt="{C831F2EB-4318-456B-80B5-3789267F9B42}" src="https://github.com/user-attachments/assets/0d8b152f-3235-4c33-8a49-659b789e3499" />
@@ -61,6 +61,30 @@
 
 <img width="940" height="516" alt="image" src="https://github.com/user-attachments/assets/0153edc3-8599-4ce6-b85f-ecc965fb14f7" />
 <img width="940" height="677" alt="image" src="https://github.com/user-attachments/assets/8031467d-a981-4c20-b4e6-7964a367c481" />
+
+# Figure 1 – Network Configuration:
+## This screenshot shows the initial network configuration and interface setup used to prepare the host for communication within the secured network.
+<img width="573" height="994" alt="{A2C5437C-2FA7-4AF9-A084-A7DE941470B6}" src="https://github.com/user-attachments/assets/25ff2353-8c69-4619-84c8-805c8bbc5ca6" />
+
+
+# Figure 2 – OPNsense Interface Configuration:
+## This screenshot shows the OPNsense interface configuration used to separate and manage traffic between the different network zones
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/b608e445-0916-4334-adcf-8b4a2818f608" />
+# Figure 3 – Firewall Connectivity Test:
+## This screenshot demonstrates connectivity testing between hosts to verify whether the configured OPNsense firewall rules correctly allow or block network traffic.
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/1e1a0b87-f77f-4f2b-bd1a-4bc6e54cb029" />
+# Figure 4 – OPNsense Firewall Live Log:
+## This screenshot shows the OPNsense firewall live log, providing evidence of allowed and blocked traffic generated during firewall testing.
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/07b23289-47fe-47dd-982b-930fb4ffe96c" />
+
+# Figure 5Firewall Blocking Evidence:
+## This screenshot shows the OPNsense firewall live log confirming that ICMP traffic from the LAN host (10.10.3.10) to 10.11.3.10 was blocked by the firewall.
+<img width="940" height="648" alt="image" src="https://github.com/user-attachments/assets/ab848322-dd9c-4c31-a00d-7b6dabb04694" />
+
+# Figure 6 – LAN Security Testing:
+## This screenshot shows connectivity and access-control testing from the LAN host. The ping test received no replies, while the SSH connection to the DMZ host was refused, demonstrating the configured network restrictions.
+<img width="940" height="753" alt="image" src="https://github.com/user-attachments/assets/a7edf2a4-358a-4370-b3ca-d30c944a4580" />
+
 
 
 
