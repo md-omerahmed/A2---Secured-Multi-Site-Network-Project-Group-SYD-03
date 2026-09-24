@@ -92,7 +92,14 @@
 ## This screenshot shows connectivity and access-control testing from the LAN host. The ping test received no replies, while the SSH connection to the DMZ host was refused, demonstrating the configured network restrictions.
 <img width="940" height="753" alt="image" src="https://github.com/user-attachments/assets/a7edf2a4-358a-4370-b3ca-d30c944a4580" />
 
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/31b12277-bb76-43d5-939a-1ed51a98e740" />
 
+<img width="940" height="700" alt="image" src="https://github.com/user-attachments/assets/d3dd7741-d699-46c5-abb2-11d5c7b46a9e" />
 
+<img width="940" height="558" alt="image" src="https://github.com/user-attachments/assets/fbc2363b-2dd9-44f8-85c9-e75685ce673f" />
 
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/ecb4ad10-9733-4ad2-b34c-714c95211cad" />
 
+<img width="940" height="747" alt="image" src="https://github.com/user-attachments/assets/5e45728c-aa81-46d0-a4ba-ce9616159a48" />
+
+<img width="940" height="703" alt="image" src="https://github.com/user-attachments/assets/ba65f861-81df-4979-9589-81123734a9a1" />
