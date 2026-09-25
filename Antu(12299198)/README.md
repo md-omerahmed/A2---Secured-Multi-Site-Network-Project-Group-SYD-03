@@ -48,10 +48,33 @@ Server1 was configured to resolve kerberos.example.com to the Kerberos KDC at 10
 # Task 12 – Client Kerberos KDC Resolution
 The Kerberos client was configured to resolve kerberos.example.com to the KDC address 10.10.1.10. The getent hosts kerberos.example.com command confirmed that the client can correctly locate the KDC using the hostname specified in the Kerberos configuration.
 <img width="658" height="537" alt="image" src="https://github.com/user-attachments/assets/fbae6ee6-9ccc-48ae-b984-9b55a278e7ea" />
-# Task 13 - All Gateways Connectivity Test
+# Task 13 - Initial Network Topology
+The network topology was created with OPNsense connecting the LAN, WAN and DMZ networks through separate interfaces and switches. This provides network segmentation so that firewall rules can control communication between each network.
+<img width="1920" height="1080" alt="initial topology" src="https://github.com/user-attachments/assets/f68afb8f-f5ce-4513-8572-a194498616b6" />
+# Task 14 - All Gateways Connectivity Test
 The OPNsense ping utility was used to test connectivity with the configured network gateways. Successful replies with 0% packet loss confirmed that the interfaces and connected networks were reachable.
 <img width="1920" height="1080" alt="All the gateways is pinging 1" src="https://github.com/user-attachments/assets/308b325b-6fce-453e-8ac0-1ec7a2a86ae0" />
-# Task 14 - DMZ Web Server Setup
+# Task 15 - DMZ Web Server Setup
 A simple web server was configured on the DMZ host using Python on port 80. The successful HTTP GET requests confirmed that the DMZ web service was running and accessible from permitted hosts.
 <img width="1920" height="1080" alt="DNZ web server" src="https://github.com/user-attachments/assets/bd4fe183-cfcc-4498-bc5e-8dff1f8891a3" />
-# Task 15 - LAN Host Connectivity Test
+# Task 16 - LAN Host Connectivity Test
+The LAN host was used to ping the OPNsense LAN interface at 10.10.1.1. The successful replies with 0% packet loss confirmed connectivity between the LAN host and the firewall.
+<img width="1920" height="1080" alt="Firefox ping for the opnsense" src="https://github.com/user-attachments/assets/5a71dd22-ab28-4bd7-b1c9-8879a12af750" />
+# Task 17 - LAN Firewall Rules
+Five firewall rules were configured on the LAN interface to control traffic from the LAN network. The rules permit selected services such as HTTP, HTTPS, DNS and SSH while restricting other traffic.
+<img width="1920" height="1080" alt="LAN 5 rules" src="https://github.com/user-attachments/assets/def73a2c-f30c-4f91-965b-99e9c6681dc8" />
+# task 18 - WAN Firewall Rule
+A WAN firewall rule was configured to permit IPv4 TCP traffic to the DMZ web server on port 80. This allows authorised HTTP access to the web server while other unsolicited WAN traffic remains restricted.
+<img width="1920" height="1080" alt="WAN RULES" src="https://github.com/user-attachments/assets/94ef3f4a-9fce-4786-ab06-58b6d330b016" />
+# Task 19 - OPT1/DMZ Firewall Rules
+Firewall rules were configured on the OPT1 interface for the DMZ network. DNS traffic was permitted while other traffic was blocked to restrict unnecessary communication from the DMZ.
+<img width="1813" height="1080" alt="OPT1 RULES" src="https://github.com/user-attachments/assets/ffa9fb9b-fe7f-4e9e-b34b-0a3599ac26f9" />
+# Task 20 - WAN Interface Configuration
+The OPNsense WAN interface was enabled and configured with a static IPv4 configuration. The private and bogon network blocking options were left unticked for the laboratory network environment.
+<img width="1920" height="1080" alt="unticked firefox block" src="https://github.com/user-attachments/assets/c4c84156-2db7-45c7-890e-07e96616cf93" />
+# Task 21 - LAN Access to DMZ Web Server
+The configured LAN firewall rule was tested by accessing the DMZ web server at 10.12.1.20. The successful response confirmed that HTTP traffic from the LAN to the DMZ web server was permitted.
+<img width="1920" height="1080" alt="LAN rule 1 permits" src="https://github.com/user-attachments/assets/5505c106-5a89-46dd-a59a-96f2eaf231b1" />
+# Task 22 - LAN Block Rule – Live View
+The OPNsense firewall Live View was used to verify blocked LAN traffic. The red log entries show ICMP traffic being blocked, confirming that the firewall rule was operating correctly.
+<img width="1920" height="1080" alt="LAN rule block live view" src="https://github.com/user-attachments/assets/db65c317-c0b5-4c38-85ca-2309858c95c3" />
