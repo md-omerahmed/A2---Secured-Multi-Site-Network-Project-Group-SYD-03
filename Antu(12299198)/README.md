@@ -48,4 +48,10 @@ Server1 was configured to resolve kerberos.example.com to the Kerberos KDC at 10
 # Task 12 – Client Kerberos KDC Resolution
 The Kerberos client was configured to resolve kerberos.example.com to the KDC address 10.10.1.10. The getent hosts kerberos.example.com command confirmed that the client can correctly locate the KDC using the hostname specified in the Kerberos configuration.
 <img width="658" height="537" alt="image" src="https://github.com/user-attachments/assets/fbae6ee6-9ccc-48ae-b984-9b55a278e7ea" />
-# 
+# Task 13 - All Gateways Connectivity Test
+The OPNsense ping utility was used to test connectivity with the configured network gateways. Successful replies with 0% packet loss confirmed that the interfaces and connected networks were reachable.
+<img width="1920" height="1080" alt="All the gateways is pinging 1" src="https://github.com/user-attachments/assets/308b325b-6fce-453e-8ac0-1ec7a2a86ae0" />
+# Task 14 - DMZ Web Server Setup
+A simple web server was configured on the DMZ host using Python on port 80. The successful HTTP GET requests confirmed that the DMZ web service was running and accessible from permitted hosts.
+<img width="1920" height="1080" alt="DNZ web server" src="https://github.com/user-attachments/assets/bd4fe183-cfcc-4498-bc5e-8dff1f8891a3" />
+# Task 15 - LAN Host Connectivity Test
