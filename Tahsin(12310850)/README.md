@@ -75,8 +75,16 @@
 ## This test provides practical evidence that the site-to-site VPN configuration is working correctly and end-to-end communication between the remote networks has been achieved.
 <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/ecb4ad10-9733-4ad2-b34c-714c95211cad" />
 
+# IPsec VPN Traffic Verification Using Wireshark
+## To validate the operation of the site-to-site IPsec VPN, I captured network traffic between the two OPNsense VPN gateways using Wireshark. The packet capture shows multiple Encapsulating Security Payload (ESP) packets exchanged between 10.0.3.1 and 10.0.3.2.
+## ESP is used by IPsec to provide protection for data transmitted across the VPN tunnel. The capture also shows distinct Security Parameter Index (SPI) values for the security associations, demonstrating bidirectional IPsec traffic between the two VPN endpoints.
+## This capture provides network-level evidence that the configured IPsec tunnel is active and that traffic between the sites is being encapsulated by IPsec before transmission across the inter-site network. Together with the successful Phase 1/Phase 2 status and connectivity testing, this verifies the successful implementation of the site-to-site VPN.
 <img width="940" height="747" alt="image" src="https://github.com/user-attachments/assets/5e45728c-aa81-46d0-a4ba-ce9616159a48" />
 
+# Detailed Analysis of IPsec ESP Packet
+## A detailed Wireshark analysis of an ESP packet captured from the active IPsec VPN tunnel. An ESP display filter was applied to isolate IPsec-protected traffic and verify the operation of the tunnel.
+## The selected packet shows communication from 10.0.3.1 to 10.0.3.2 using Encapsulating Security Payload (ESP). Wireshark identifies the packet with an SPI value of 0xc2eac949 and an ESP sequence number of 8. The SPI identifies the relevant IPsec Security Association, while the sequence number is used as part of ESP's anti-replay protection mechanism.
+## The packet contents are not displayed as normal application-layer data, which is consistent with the traffic being protected by ESP. This capture therefore provides packet-level evidence that the configured IPsec Security Association is actively processing traffic between the two OPNsense VPN endpoints.
 <img width="940" height="703" alt="image" src="https://github.com/user-attachments/assets/ba65f861-81df-4979-9589-81123734a9a1" />
 
 <img width="940" height="527" alt="image" src="https://github.com/user-attachments/assets/2d880609-bae2-4fef-ba70-62186d9855dd" />
