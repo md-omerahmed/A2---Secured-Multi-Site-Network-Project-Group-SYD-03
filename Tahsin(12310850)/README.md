@@ -87,15 +87,58 @@
 ## The packet contents are not displayed as normal application-layer data, which is consistent with the traffic being protected by ESP. This capture therefore provides packet-level evidence that the configured IPsec Security Association is actively processing traffic between the two OPNsense VPN endpoints.
 <img width="940" height="703" alt="image" src="https://github.com/user-attachments/assets/ba65f861-81df-4979-9589-81123734a9a1" />
 
-<img width="940" height="527" alt="image" src="https://github.com/user-attachments/assets/2d880609-bae2-4fef-ba70-62186d9855dd" />
-
+# End-to-End Network Connectivity and Service Validation
+## This screenshot provides evidence of successful end-to-end network connectivity and application service accessibility within the configured network environment.
+## Connectivity was validated from the client host 10.14.3.10 by sending ICMP echo requests to 10.14.3.20 and 10.14.3.30. Both destination hosts responded successfully with 0% packet loss, confirming that IP addressing, routing, and the applicable firewall policies are permitting communication between the systems.
+## Following the connectivity test, I used curl to access the HTTP service hosted on 10.14.3.20. The server returned a valid HTML response containing a directory listing, confirming successful TCP/HTTP communication and demonstrating that the web service is reachable from the client.
+## These results provide evidence that both network-layer connectivity and application-layer communication are functioning as intended.
 <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/17bcfa50-5eae-4f50-9d7a-f14324261546" />
+
+# HTTP Server Deployment and Client Request Verification
+## This screenshot demonstrates the successful deployment and validation of an HTTP service on the server host. A Python-based HTTP server was started using python3 -m http.server 80, binding the service to TCP port 80 and making it available to network clients.
+## The server subsequently received an HTTP GET request from the client at 10.14.3.20. The request was processed successfully and returned the HTTP status code 200, confirming that the requested resource was successfully served.
+## This result provides application-layer evidence that the HTTP service is operational, TCP port 80 is reachable, and client-to-server communication is functioning correctly across the configured network.
 <img width="940" height="244" alt="image" src="https://github.com/user-attachments/assets/b89d1164-fee9-4c75-a7fa-bd1c53a3e25b" />
+
+# Suricata IDS Configuration and Rule Validation
+## This screenshot demonstrates the successful configuration and validation of Suricata as a Network Intrusion Detection System (IDS). The Suricata configuration file and custom rule set were prepared, after which the configuration was validated using Suricata’s test mode (-T).
+## The validation output confirms that Suricata successfully loaded the configuration and initialized its detection components. The system loaded 1 rule successfully with 0 failed and 0 skipped rules, and the final message “Configuration provided was successfully loaded” confirms that no configuration errors were detected.
+## This verification ensures that the Suricata IDS configuration and custom detection rule are syntactically valid and ready for network traffic monitoring and security event detection.
 <img width="940" height="229" alt="image" src="https://github.com/user-attachments/assets/674d7dd0-1ce9-41b3-972a-d53685e15554" />
+
+# Suricata IDS Deployment and Runtime Verification
+## This screenshot demonstrates the successful deployment and execution of Suricata in Intrusion Detection System (IDS) mode on the designated monitoring interface. Suricata was started using the configured rule set, with logging directed to the standard Suricata log directory.
+## The runtime output confirms that the detection engine initialized successfully and loaded one custom detection rule with zero failed or skipped rules. The message “Engine started” verifies that Suricata entered an operational state and was ready to inspect network traffic.
+## The running process was also verified using pgrep -x suricata, which returned a valid process ID, confirming that the Suricata IDS process remained active after startup. This provides evidence that the IDS was correctly configured, successfully launched, and ready to monitor network traffic for activity matching the defined security rules.
+## Figure: Successful deployment and runtime verification of Suricata IDS with the detection engine active and custom rule loaded.
 <img width="940" height="233" alt="image" src="https://github.com/user-attachments/assets/c49769df-55e1-4572-a6c4-176b2ae9ac00" />
+
+# IDS Testing Using Simulated Suspicious Network Traffic
+## This screenshot demonstrates the generation of controlled test traffic to validate the Suricata IDS monitoring environment. HTTP connectivity was first confirmed by successfully retrieving content from the web server.
+## To test detection capabilities, HTTP requests were generated using curl with a custom BadBot User-Agent, providing recognizable traffic that can be matched by a corresponding Suricata detection rule. In addition, Netcat (nc) was used to establish a TCP connection to host 10.14.3.10 on port 4444, where test messages were exchanged successfully.
+## These controlled tests generate specific network patterns that can be inspected by Suricata. The results can then be correlated with Suricata's alert logs to demonstrate that the IDS is capable of identifying traffic matching the configured detection rules.
+## Figure: Generation of controlled HTTP and TCP test traffic using curl and Netcat for Suricata IDS detection and alert validation.
 <img width="940" height="1061" alt="image" src="https://github.com/user-attachments/assets/907750d0-41b3-41dd-aeb2-4255e4db4123" />
+
+
+# HTTP and TCP Service Testing for IDS Validation
+## This screenshot demonstrates the server-side configuration used to generate and verify network traffic for Suricata IDS testing. A Python HTTP server was deployed on TCP port 80, and multiple HTTP GET requests were successfully received from the client at 10.14.3.20. Each request returned an HTTP 200 status code, confirming successful application-layer communication.
+## A Netcat listener was also configured on TCP port 4444 using nc -l -p 4444. The server successfully received test messages sent from the remote client, confirming bidirectional TCP communication over the designated test port.
+## These controlled HTTP and Netcat sessions provide reproducible network traffic that can be monitored by Suricata and correlated with the configured IDS rules and alert logs. This supports verification that the IDS can observe and analyse traffic across the monitored network.
+## Figure: Server-side HTTP and Netcat services receiving test traffic for Suricata IDS monitoring and detection validation.
 <img width="940" height="514" alt="image" src="https://github.com/user-attachments/assets/d7d5df3e-a55d-4300-81a2-75f7445181e4" />
+
+# Suricata IDS Alert Generation and Detection Verification
+## This screenshot demonstrates the successful detection and logging of suspicious network activity by the Suricata Intrusion Detection System (IDS). Suricata was executed on the monitored eth0 interface, and the detection engine initialized successfully with the configured custom rules.
+## The fast.log output confirms that Suricata generated alerts for the controlled security tests. A suspicious HTTP User-Agent (BadBot) was detected and classified as a Web Application Attack. Suricata also detected outbound TCP connections to port 4444, which were identified by the custom rule as potential reverse-shell activity and classified as Network Trojan traffic.
+## The alerts include relevant information such as timestamps, source and destination IP addresses, TCP ports, classification, and priority, demonstrating that Suricata was actively inspecting traffic and correctly matching network activity against the configured detection rules.
+## This provides clear evidence that the Suricata IDS deployment is operational and capable of generating security alerts for predefined suspicious network behaviour.
+## Figure: Suricata fast.log showing successful detection of a suspicious HTTP User-Agent and TCP port 4444 traffic generated during controlled IDS testing.
 <img width="940" height="296" alt="image" src="https://github.com/user-attachments/assets/99524e1f-061d-4ad0-85b4-4f03812a6e5b" />
+
+# Suricata EVE JSON Alert Verification
+## This screenshot shows the Suricata eve.json log generated during IDS testing. The log confirms that the custom BadBot User-Agent rule was successfully triggered and classified as a Web Application Attack. It also records key details such as source/destination IP addresses, ports, protocol, and HTTP information.
+## Figure: Suricata eve.json log confirming successful detection and detailed logging of the custom security alert.
 <img width="940" height="458" alt="image" src="https://github.com/user-attachments/assets/861e3b21-8231-4aa5-be25-c2a9aa865c47" />
 
 <img width="1920" height="1080" alt="{8C3DED52-32C7-453E-B4AF-0A11B111EB35}" src="https://github.com/user-attachments/assets/23e9938f-4fde-4b6f-8021-706a8182fbdb" />
