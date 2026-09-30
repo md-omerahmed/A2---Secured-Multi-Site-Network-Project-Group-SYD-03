@@ -2,25 +2,20 @@
 # Topology of Group Assesment
 <img width="1920" height="851" alt="image" src="https://github.com/user-attachments/assets/606dbd08-795d-40fe-9362-3f3074a142af" />
 
-
-
-<img width="940" height="516" alt="image" src="https://github.com/user-attachments/assets/0153edc3-8599-4ce6-b85f-ecc965fb14f7" />
-<img width="940" height="677" alt="image" src="https://github.com/user-attachments/assets/8031467d-a981-4c20-b4e6-7964a367c481" />
-
-# Figure 1 – Network Configuration:
+#  Network Configuration:
 ## This screenshot shows the initial network configuration and interface setup used to prepare the host for communication within the secured network.
 <img width="573" height="994" alt="{A2C5437C-2FA7-4AF9-A084-A7DE941470B6}" src="https://github.com/user-attachments/assets/25ff2353-8c69-4619-84c8-805c8bbc5ca6" />
 
 
-# Figure 2 – OPNsense Interface Configuration:
+# OPNsense Interface Configuration:
 ## This screenshot shows the OPNsense interface configuration used to separate and manage traffic between the different network zones
 <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/b608e445-0916-4334-adcf-8b4a2818f608" />
 
-# Figure 3 – Firewall Connectivity Test:
+# Firewall Connectivity Test:
 ## This screenshot demonstrates connectivity testing between hosts to verify whether the configured OPNsense firewall rules correctly allow or block network traffic.
 <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/1e1a0b87-f77f-4f2b-bd1a-4bc6e54cb029" />
 
-# Figure 4 – OPNsense Firewall Live Log:
+#  OPNsense Firewall Live Log:
 ## This screenshot shows the OPNsense firewall live log, providing evidence of allowed and blocked traffic generated during firewall testing.
 <img width="840" height="624" alt="image" src="https://github.com/user-attachments/assets/5717ecb0-872f-4a27-a537-bfd083bdba56" />
 
@@ -32,11 +27,11 @@
 ## This screenshot shows the OPNsense DMZ (OPT1) firewall rules, allowing DNS traffic on port 53 from the DMZ_NET while blocking other unmatched IPv4 traffic to restrict access from the DMZ..
 <img width="852" height="670" alt="image" src="https://github.com/user-attachments/assets/0cd600f4-e012-4447-9560-aa923cc57f94" />
 
-# Figure 5Firewall Blocking Evidence:
+# Firewall Blocking Evidence:
 ## This screenshot shows the OPNsense firewall live log confirming that ICMP traffic from the LAN host (10.10.3.10) to 10.11.3.10 was blocked by the firewall.
 <img width="940" height="648" alt="image" src="https://github.com/user-attachments/assets/ab848322-dd9c-4c31-a00d-7b6dabb04694" />
 
-# Figure 6 – LAN Security Testing:
+#  LAN Security Testing:
 ## This screenshot shows connectivity and access-control testing from the LAN host. The ping test received no replies, while the SSH connection to the DMZ host was refused, demonstrating the configured network restrictions.
 <img width="940" height="753" alt="image" src="https://github.com/user-attachments/assets/a7edf2a4-358a-4370-b3ca-d30c944a4580" />
 
@@ -49,14 +44,12 @@
 <img width="940" height="700" alt="image" src="https://github.com/user-attachments/assets/d3dd7741-d699-46c5-abb2-11d5c7b46a9e" />
 
 # IPsec VPN – Phase 1 Configuration
-
 ## This screenshot shows the IPsec Phase 1 configuration in OPNsense. I configured the VPN using IKEv2 with IPv4 and selected the WAN interface for the VPN connection. The remote gateway was configured as 10.0.3.1, which represents the VPN endpoint on the remote site.
-
 ## For authentication, I selected Mutual PSK (Pre-Shared Key) so that both OPNsense firewalls can authenticate each other using the same shared secret. This Phase 1 configuration establishes the secure connection between the two VPN gateways before Phase 2 handles communication between the internal networks.
 
 <img width="940" height="700" alt="image" src="https://github.com/user-attachments/assets/6725afbf-e7b2-44f0-b19e-23150d4423cc" />
 
-# Psec VPN – Tunnel Status Verification
+# IPsec VPN – Tunnel Status Verification
 ## IPsec Status Overview in OPNsense, confirming that the site-to-site VPN tunnel was successfully established. Phase 1 is active using IKEv2, with the local VPN endpoint 10.0.3.1 communicating with the remote endpoint 10.0.3.2.
 # Under Phase 2, the tunnel between the local subnet 10.10.3.0/24 and the remote subnet 10.13.3.0/24 shows the state INSTALLED. This confirms that the IPsec security associations were successfully created and the VPN tunnel is ready to carry protected traffic between the two sites.
 
