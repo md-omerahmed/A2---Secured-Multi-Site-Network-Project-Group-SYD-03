@@ -40,3 +40,55 @@
 <img width="1906" height="971" alt="16 network week 6" src="https://github.com/user-attachments/assets/9fa2311f-0313-4fd3-b765-cb8c8df5bbaa" />
 <img width="1917" height="980" alt="19 network week 6" src="https://github.com/user-attachments/assets/5a848266-67b3-4763-aa6e-c37644e09e8a" />
 <img width="1909" height="984" alt="Topology Diagram" src="https://github.com/user-attachments/assets/e2cd67ea-42dc-4db3-99f4-16e5149e7e19" />
+
+
+# Suricata IDS Report
+This activity focused on configuring and testing Suricata as a passive Intrusion Detection System (IDS) in GNS3. The purpose was to monitor network traffic, create custom detection rules, trigger those rules using test traffic, and verify the generated alerts. suricata-basics-instructions
+
+# Network Connectivity
+The client was successfully connected to the server on the internal network. The client was able to ping the server at 10.11.2.30, showing successful communication between both devices. The client also accessed the HTTP server and received the directory listing successfully.
+<img width="1911" height="986" alt="1 network week 8" src="https://github.com/user-attachments/assets/030ec394-5324-47d3-9fe1-f478749f200b" />
+Figure 1: Client successfully pinging the server and accessing the HTTP web service.
+
+The HTTP server was successfully started on the server node. The server received HTTP GET requests from the client, confirming that the web service and network communication were working correctly.
+<img width="1919" height="1011" alt="2 network week 8" src="https://github.com/user-attachments/assets/2a3b46ed-c377-4e71-8f1f-0d9eede2177a" />
+Figure 2: HTTP server running successfully and receiving requests from the client.
+
+# Suricata Configuration
+The Suricata configuration file was reviewed on the IDS node. The HOME_NET setting included private network ranges such as 10.0.0.0/8, meaning the 10.11.2.0/24 network used in this activity was covered by the Suricata monitoring configuration. The activity also specifies that Suricata monitors traffic using its configured data interface and loads custom detection rules from the custom rules file. suricata-basics-instructions
+<img width="1919" height="1023" alt="3 network week 8" src="https://github.com/user-attachments/assets/8606451c-5278-410c-98cf-85d9d04593b9" />
+Figure 3: Suricata configuration showing the HOME_NET network settings.
+
+The Suricata configuration directory was checked to confirm that the required configuration files were available, including the main suricata.yaml file.
+<img width="1912" height="989" alt="4 network week 8" src="https://github.com/user-attachments/assets/a09bf58b-e2ad-414e-aaed-34e922c49cda" />
+Figure 4: Suricata configuration files available on the IDS node.
+
+# Custom Detection Rules
+Two custom Suricata rules were configured. The first rule was designed to detect HTTP traffic containing the suspicious BadBot User-Agent, while the second rule monitored outbound TCP connections to port 4444, which can be associated with reverse-shell activity. suricata-basics-instructions
+<img width="1906" height="980" alt="5 network week 8" src="https://github.com/user-attachments/assets/20c3f634-6d61-4e2f-97d7-9c875cfaa20a" />
+Figure 5: Custom Suricata rules for BadBot User-Agent detection and TCP port 4444 monitoring.
+
+# Rule Validation
+The Suricata configuration was initially tested and showed that the custom rules were not yet loaded. This was corrected by reviewing and updating the custom rules configuration.
+<img width="1919" height="982" alt="6 network week 8" src="https://github.com/user-attachments/assets/7cc859ce-ec92-4b0d-97e3-1b589bb2f8df" />
+Figure 6: Initial Suricata validation showing that no custom rules were loaded.
+After correcting the rule configuration, Suricata successfully processed the custom rules. The output confirmed that two rules were successfully loaded with zero failed rules. The IDS engine then started successfully on interface eth0, and the running process was confirmed.
+This matches the expected validation process described in the activity, where successful loading should show two rules loaded and no failed rules. suricata-basics-instructions
+<img width="1919" height="1020" alt="7 network week 8" src="https://github.com/user-attachments/assets/517d8e4d-c17d-4668-a097-f8a73841dcb6" />
+Figure 7: Successful Suricata validation, two custom rules loaded, and IDS engine started successfully.
+
+# Traffic Generation
+Test traffic was generated from the client to verify whether Suricata could detect suspicious activity. HTTP traffic was sent to the web server, and TCP traffic was also generated toward the server to test the port-based detection rule.
+The activity requires the BadBot User-Agent rule to trigger when matching HTTP traffic is observed and the port 4444 rule to trigger when an established TCP connection is detected. suricata-basics-instructions suricata-basics-instructions
+<img width="1910" height="983" alt="8 network week 8" src="https://github.com/user-attachments/assets/b93ffc47-6b17-46cc-b0e9-d6f4834de559" />
+Figure 8: Client generating HTTP and TCP traffic for Suricata detection testing.
+
+The server successfully received the generated test traffic. The HTTP GET requests were recorded by the web server, and the TCP test traffic was also received.
+<img width="1919" height="993" alt="9 network week 8" src="https://github.com/user-attachments/assets/edf50807-6bb8-4094-a097-daa6fb14918c" />
+Figure 9: Server receiving HTTP requests and TCP test traffic generated by the client.
+
+# Alert Verification
+The final Suricata logs confirmed that both custom detection rules were functioning successfully. The fast.log file showed alerts for the suspicious BadBot User-Agent using SID 1000001 and the outbound connection to port 4444 using SID 1000002.
+The eve.json output also contained detailed information about the detected event, including source and destination addresses, protocol information, HTTP details, and alert information. The activity explains that fast.log provides a quick one-line alert summary, whereas eve.json provides more detailed structured event information. suricata-basics-instructions
+<img width="1919" height="997" alt="10 network week 8" src="https://github.com/user-attachments/assets/9ed83655-eccb-4152-b6a9-07d8afac9692" />
+Figure 10: Suricata fast.log and eve.json confirming successful detection of the BadBot User-Agent and port 4444 traffic.
