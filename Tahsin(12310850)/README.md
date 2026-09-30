@@ -42,6 +42,12 @@
 ## Topology
 <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/31b12277-bb76-43d5-939a-1ed51a98e740" />
 
+# IPsec VPN – Phase 2 Configuration
+
+## This screenshot shows the IPsec Phase 2 tunnel configuration in OPNsense. I configured Phase 2 to define which networks are allowed to communicate securely through the site-to-site VPN tunnel
+## The Local Network was configured as 10.10.3.0/24, while the Remote Network was set to 10.13.3.0/24. I selected ESP (Encapsulating Security Payload) as the protocol to protect the traffic travelling between the two networks. For security, AES-256-GCM was selected as the encryption algorithm and SHA-256 was configured for hashing/authentication.
+## This configuration allows traffic between the two LAN networks to be protected through the IPsec VPN tunnel, providing secure communication between the two sites
+
 <img width="940" height="700" alt="image" src="https://github.com/user-attachments/assets/d3dd7741-d699-46c5-abb2-11d5c7b46a9e" />
 
 <img width="940" height="558" alt="image" src="https://github.com/user-attachments/assets/fbc2363b-2dd9-44f8-85c9-e75685ce673f" />
