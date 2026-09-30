@@ -41,6 +41,11 @@
 <img width="1917" height="980" alt="19 network week 6" src="https://github.com/user-attachments/assets/5a848266-67b3-4763-aa6e-c37644e09e8a" />
 <img width="1909" height="984" alt="Topology Diagram" src="https://github.com/user-attachments/assets/e2cd67ea-42dc-4db3-99f4-16e5149e7e19" />
 
+# OPNsense Firewall Report
+This activity focused on building a segmented network using OPNsense with separate WAN, LAN, and DMZ zones. Firewall rules were configured to control communication between the zones and ensure that only permitted traffic could pass.
+
+
+
 # WireGuard VPN Report
 This activity focused on configuring and verifying a site-to-site VPN connection between two networks. The screenshots show the VPN configuration in the firewall interface, tunnel status information, command-line verification, and packet capture evidence.
 
