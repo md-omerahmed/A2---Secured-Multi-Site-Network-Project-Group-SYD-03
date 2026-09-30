@@ -1,6 +1,7 @@
 
-# Demo Topology of Group Assesment
-<img width="1920" height="1080" alt="{01D8856A-66F3-479E-9501-51DD22B07997}" src="https://github.com/user-attachments/assets/096a56eb-bcb0-4c2d-9ab4-8bc7517f4ace" />
+# Topology of Group Assesment
+<img width="1920" height="851" alt="image" src="https://github.com/user-attachments/assets/606dbd08-795d-40fe-9362-3f3074a142af" />
+
 
 
 <img width="940" height="516" alt="image" src="https://github.com/user-attachments/assets/0153edc3-8599-4ce6-b85f-ecc965fb14f7" />
@@ -39,9 +40,6 @@
 ## This screenshot shows connectivity and access-control testing from the LAN host. The ping test received no replies, while the SSH connection to the DMZ host was refused, demonstrating the configured network restrictions.
 <img width="940" height="753" alt="image" src="https://github.com/user-attachments/assets/a7edf2a4-358a-4370-b3ca-d30c944a4580" />
 
-## Topology
-<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/31b12277-bb76-43d5-939a-1ed51a98e740" />
-
 # IPsec VPN – Phase 2 Configuration
 
 ## This screenshot shows the IPsec Phase 2 tunnel configuration in OPNsense. I configured Phase 2 to define which networks are allowed to communicate securely through the site-to-site VPN tunnel
@@ -50,8 +48,38 @@
 
 <img width="940" height="700" alt="image" src="https://github.com/user-attachments/assets/d3dd7741-d699-46c5-abb2-11d5c7b46a9e" />
 
+# IPsec VPN – Phase 1 Configuration
+
+## This screenshot shows the IPsec Phase 1 configuration in OPNsense. I configured the VPN using IKEv2 with IPv4 and selected the WAN interface for the VPN connection. The remote gateway was configured as 10.0.3.1, which represents the VPN endpoint on the remote site.
+
+## For authentication, I selected Mutual PSK (Pre-Shared Key) so that both OPNsense firewalls can authenticate each other using the same shared secret. This Phase 1 configuration establishes the secure connection between the two VPN gateways before Phase 2 handles communication between the internal networks.
+
+<img width="940" height="700" alt="image" src="https://github.com/user-attachments/assets/6725afbf-e7b2-44f0-b19e-23150d4423cc" />
+
+# Psec VPN – Tunnel Status Verification
+## IPsec Status Overview in OPNsense, confirming that the site-to-site VPN tunnel was successfully established. Phase 1 is active using IKEv2, with the local VPN endpoint 10.0.3.1 communicating with the remote endpoint 10.0.3.2.
+# Under Phase 2, the tunnel between the local subnet 10.10.3.0/24 and the remote subnet 10.13.3.0/24 shows the state INSTALLED. This confirms that the IPsec security associations were successfully created and the VPN tunnel is ready to carry protected traffic between the two sites.
+
 <img width="940" height="558" alt="image" src="https://github.com/user-attachments/assets/fbc2363b-2dd9-44f8-85c9-e75685ce673f" />
 
+# It shows the completed IPsec site-to-site VPN configuration in OPNsense. Phase 1 is enabled using IPv4 IKEv2, with the remote VPN gateway configured as 10.0.3.2. The Phase 1 proposal uses AES-GCM encryption with SHA-256 for secure tunnel establishment.
+## For Phase 2, I configured the local subnet as 10.10.3.0/24 and the remote subnet as 10.13.3.0/24. The Phase 2 proposal uses AES-256-GCM, SHA-256, and DH Group 14.
+
+## Finally, IPsec was enabled, allowing the two remote LAN networks to communicate securely through the configured VPN tunnel.
+
+<img width="940" height="704" alt="image" src="https://github.com/user-attachments/assets/0ea1bcfd-0305-41c5-b6a6-c6f554a52f81" />
+
+# IPsec VPN – Successful Tunnel Verification
+## his screenshot provides evidence that the IPsec site-to-site VPN tunnel is successfully established between the two OPNsense firewalls.
+## The Phase 1 connection is active using IKEv2, with the local VPN endpoint 10.0.3.2 connected to the remote endpoint 10.0.3.1. In Phase 2, the local subnet 10.13.3.0/24 is connected to the remote subnet 10.10.3.0/24, and the status is shown as INSTALLED.
+## This confirms that the IPsec security associations have been successfully established on this side of the VPN and that the tunnel is ready to securely carry traffic between the two site networks.
+
+<img width="940" height="558" alt="image" src="https://github.com/user-attachments/assets/bc98d9af-2a81-4e80-a6cf-779de1fb6929" />
+
+# IPsec VPN – Ping Connectivity Test
+## This screenshot shows the connectivity test performed after establishing the IPsec VPN tunnel. I used the ping command to test communication with the remote host 10.13.3.20.
+## The test successfully received replies from the remote host, with 3 packets transmitted, 3 packets received, and 0% packet loss. This confirms that traffic can successfully pass between the two sites through the configured IPsec VPN tunnel.
+## This test provides practical evidence that the site-to-site VPN configuration is working correctly and end-to-end communication between the remote networks has been achieved.
 <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/ecb4ad10-9733-4ad2-b34c-714c95211cad" />
 
 <img width="940" height="747" alt="image" src="https://github.com/user-attachments/assets/5e45728c-aa81-46d0-a4ba-ce9616159a48" />
