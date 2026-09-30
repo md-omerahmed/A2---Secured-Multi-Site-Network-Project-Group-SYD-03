@@ -6,7 +6,13 @@
 <img width="1920" height="989" alt="image" src="https://github.com/user-attachments/assets/d7a62a6c-6e44-4c5f-86d3-0119f21acde2" />
 
 ## Demo Topology 
+
 <img width="1919" height="1027" alt="image" src="https://github.com/user-attachments/assets/95cea0a2-41c3-49bb-b63a-0ae5c73496d6" />
+
+## Final Topology 
+
+<img width="1920" height="1042" alt="{114F09EC-5291-4B7A-9B4E-CA8DC18A05AD}" src="https://github.com/user-attachments/assets/f6f0cd04-f0e1-45ab-b70a-28c0b7389f27" />
+
 
 # Host1 Initial Network Check
 The ip addr command was used to inspect Host1 before configuring the Kerberos KDC. The eth0 interface was active but did not have an IPv4 address assigned, confirming that the Kerberos address could be configured without conflicting with an existing IPv4 configuration.
