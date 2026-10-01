@@ -43,4 +43,4 @@ We also have evidence of our teamwork through GitHub commits, the Kanban board, 
 <img width="4032" height="3024" alt="IMG_2465" src="https://github.com/user-attachments/assets/71255de1-996d-450b-be78-93e7943e9f61" />
 
 
-<img width="1920" height="1080" alt="{15F37D22-E1E8-438E-8427-3624AD0D2AC6}" src="https://github.com/user-attachments/assets/24778fdf-0ba2-4e80-8259-c6124e7922af" />
+
