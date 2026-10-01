@@ -116,3 +116,33 @@ Suricata was started successfully in IDS mode and the alert log was reviewed. Th
 
 <img width="1020" height="574" alt="image" src="https://github.com/user-attachments/assets/57ba4a0c-d827-4356-b32c-e4c2542d5616" />
 
+# Task 26 - Kerberos KDC Configuration
+The Kerberos Key Distribution Center (KDC) was configured for the EXAMPLE.COM realm. The Kerberos database was created and the required Kerberos services were started. User and host principals were then created using kadmin.local. A principal for the user antu and host principals for the server and client were added. A server keytab was also generated so that the server could authenticate Kerberos service requests.
+
+<img width="1920" height="1080" alt="KDC HOST" src="https://github.com/user-attachments/assets/6210807c-4239-4ab0-aec2-82c70086a0d9" />
+
+# Task 27 - Kerberos Server Configuration
+The server was configured with the correct hostname mappings and the Kerberos server keytab was installed. The keytab was checked to confirm that the host/server.example.com principal was available. SSH was then configured to support GSSAPI/Kerberos authentication. A local antu account and .k5login file were also configured to allow the Kerberos principal to access the server.
+
+<img width="1920" height="1080" alt="KDC Server host" src="https://github.com/user-attachments/assets/b495198d-dd88-4405-abb2-c7d90366e85a" />
+
+
+# Task 28 - Client Connectivity and Kerberos Ticket
+The Kerberos client was configured with hostname mappings for the KDC, server and client systems. Connectivity to both the KDC and server was verified using ping. The user then authenticated with the KDC using kinit antu. The klist output confirms that a valid Ticket Granting Ticket (TGT) for antu@EXAMPLE.COM was successfully obtained.
+
+<img width="1920" height="1080" alt="KDC Client Host" src="https://github.com/user-attachments/assets/87b6d54e-a889-4e47-8fee-79c3cbbade02" />
+
+# Task 29 - Kerberos-Authenticated SSH Connection
+After obtaining the Kerberos ticket, an SSH connection to server.example.com was tested using GSSAPI authentication. Earlier unsuccessful attempts were corrected, and the final connection successfully opened the remote Alpine Linux server without requiring normal SSH password authentication. The klist output also shows the host/server.example.com service ticket, confirming that Kerberos was used for the SSH service.
+
+<img width="1920" height="1080" alt="client got ticket" src="https://github.com/user-attachments/assets/d14db222-ac7c-4527-9f14-3ac5269cd891" />
+
+# Task 30 - Kerberos and SSH Traffic Capture
+Wireshark was used to capture traffic generated during the authentication process. The capture shows Kerberos packets between the client and KDC followed by the TCP connection and SSH protocol communication between the client and server. This provides network-level evidence that Kerberos authentication and SSH communication occurred during testing.
+
+<img width="1920" height="1080" alt="capture for kerberos" src="https://github.com/user-attachments/assets/ac746391-75f0-434a-8b95-ff23615ecd06" />
+
+# Task 31 - Verification of Kerberos Message Exchange
+A kerberos display filter was applied in Wireshark to isolate Kerberos traffic. The capture shows important Kerberos messages including AS-REQ, AS-REP, TGS-REQ and TGS-REP. The AS exchange demonstrates the client obtaining its initial authentication ticket, while the TGS exchange demonstrates the client requesting and receiving a service ticket. This confirms that the Kerberos ticket-based authentication process was operating successfully.
+
+<img width="1920" height="1080" alt="capture of kerberos-2" src="https://github.com/user-attachments/assets/457c79f3-6db2-4c47-97cb-7096f88db421" />
