@@ -35,6 +35,9 @@
 ## This screenshot shows connectivity and access-control testing from the LAN host. The ping test received no replies, while the SSH connection to the DMZ host was refused, demonstrating the configured network restrictions.
 <img width="940" height="753" alt="image" src="https://github.com/user-attachments/assets/a7edf2a4-358a-4370-b3ca-d30c944a4580" />
 
+
+<img width="1920" height="1080" alt="{15F37D22-E1E8-438E-8427-3624AD0D2AC6}" src="https://github.com/user-attachments/assets/24778fdf-0ba2-4e80-8259-c6124e7922af" />
+
 # IPsec VPN – Phase 2 Configuration
 
 ## This screenshot shows the IPsec Phase 2 tunnel configuration in OPNsense. I configured Phase 2 to define which networks are allowed to communicate securely through the site-to-site VPN tunnel
