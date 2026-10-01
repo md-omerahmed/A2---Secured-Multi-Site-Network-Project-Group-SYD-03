@@ -182,6 +182,7 @@ Figure 10: Suricata fast.log and eve.json confirming successful detection of the
 Tailscale Connectivity
 Tailscale was used to connect the separate branch sites and create communication between the group members’ networks. Each site used a different IP range so that there were no addressing conflicts, and the Tailscale routers were used to advertise the local network routes. This allowed devices from one site to communicate with devices at another site and supported the required federated multi-site network. a2-secured-multisite-network-pr…
 After the connection was configured, cross-site connectivity was tested to confirm that traffic could successfully travel between the different branch networks. Tailscale also provided the connectivity needed for services such as Kerberos authentication to work across sites. The assessment separately requires a site-to-site VPN, so Tailscale was used for interconnecting the sites rather than replacing the VPN requirement.
+<img width="1862" height="999" alt="{0C12C1C9-3650-45F0-8E05-F4807F95D527}" src="https://github.com/user-attachments/assets/850cf19f-fbc9-4bf4-b6fb-6c04d7eb4296" />
 
 Figure: Tailscale connection between the branch sites.
 
