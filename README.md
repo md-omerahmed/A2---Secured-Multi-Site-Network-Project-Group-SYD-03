@@ -42,5 +42,6 @@ We also have evidence of our teamwork through GitHub commits, the Kanban board, 
 
 <img width="4032" height="3024" alt="IMG_2465" src="https://github.com/user-attachments/assets/71255de1-996d-450b-be78-93e7943e9f61" />
 tailscaled 2> /tmp/tailscale.log &
+
  tailscale up --advertise-routes=10.13.2.0/24 --snat-subnet-routes=false --ac
 cept-routes
