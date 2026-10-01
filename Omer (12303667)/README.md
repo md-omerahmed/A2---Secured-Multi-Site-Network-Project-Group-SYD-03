@@ -184,8 +184,13 @@ Tailscale was used to connect the separate branch sites and create communication
 After the connection was configured, cross-site connectivity was tested to confirm that traffic could successfully travel between the different branch networks. Tailscale also provided the connectivity needed for services such as Kerberos authentication to work across sites. The assessment separately requires a site-to-site VPN, so Tailscale was used for interconnecting the sites rather than replacing the VPN requirement.
 <img width="1862" height="999" alt="{0C12C1C9-3650-45F0-8E05-F4807F95D527}" src="https://github.com/user-attachments/assets/850cf19f-fbc9-4bf4-b6fb-6c04d7eb4296" />
 <img width="1920" height="1080" alt="{15F37D22-E1E8-438E-8427-3624AD0D2AC6}" src="https://github.com/user-attachments/assets/24778fdf-0ba2-4e80-8259-c6124e7922af" />
+figure: Commands for tailscale and tailscale homepage
 
-Figure: Tailscale connection between the branch sites.
+
+# Connectivity test from Omer site to Tahsin site
+<img width="1880" height="992" alt="{DF97A582-8DA9-44E8-87EB-13FFE44F1443}" src="https://github.com/user-attachments/assets/5d7f9b65-1133-4932-b0c1-39e9fb2a1875" />
+# Connectivity test from omer site to antu site
+<img width="1908" height="981" alt="{BF4C8349-B1CA-4123-8F8B-ECC7FA39F784}" src="https://github.com/user-attachments/assets/7b7b80f7-a953-4c7a-878e-003d6d512d09" />
 
 # Overall Reflection
 This project helped me understand how different network security technologies work together in a real multi-site environment. Instead of working with each security tool separately, we had to combine services such as Kerberos, OPNsense firewalls, Tailscale, site-to-site VPNs and Suricata into one secured network. This made me understand the importance of defence-in-depth, where several security controls protect the network rather than relying on only one layer.
