@@ -182,6 +182,16 @@
 # Successful pinging from Site A to Site B
 <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/3bbc87db-110a-4bf6-a219-6eb55d0dd198" />
 
+# Tailscale Inter-Site VPN Connectivity
+## Established and verified the Tailscale VPN connection between my network and Antu’s remote site. Connectivity testing confirmed that hosts across both sites were reachable, demonstrating successful secure inter-site communication through Tailscale.
 <img width="1920" height="1080" alt="{15F37D22-E1E8-438E-8427-3624AD0D2AC6}" src="https://github.com/user-attachments/assets/24778fdf-0ba2-4e80-8259-c6124e7922af" />
+
+# Cross-Site Connectivity Testing with OMER's Site
+Tested connectivity from my site to multiple hosts on Omer's remote site through the inter-site connection. Successful ping responses from 10.13.2.10, 10.13.2.20, and 10.13.2.1, all with 0% packet loss, confirmed that the remote hosts were reachable and cross-site communication was working correctly.
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/d356771b-4100-4401-bcca-67a2dc1d8494" />
+
+# Tailscale Connection with Antu’s Site
+Verified connectivity between my site and Antu’s site through the Tailscale VPN. Successful ping tests to 10.13.1.10, 10.13.1.20, and 10.13.1.1 with 0% packet loss confirmed that the Tailscale-based inter-site connection was working correctly.
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/a28b788a-9e58-4fac-9468-5a280f44faea" />
 
 
