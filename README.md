@@ -23,3 +23,12 @@ Another idea would be to have a wireless intrusion-detection system to monitor w
 These wireless security measures would complement our multi-site defence in depth network. There would not be a single control for security. Instead, the combination of WPA3-Enterprise, authentication, VLAN separation, management-frame protection and intrusion detection in OPNsense firewall rules would help minimize risk of unauthorised access.
 
 The wireless portion of this assessment is merely a design discussion. We will NOT be required to design a wireless access point or set up a wireless network in GNS3. In this section, the authors provide an explanation of how the existing multi-site architecture can be expanded to provide wireless access in a secure manner.
+
+
+# Project Planning and Kanban Board
+
+The group used a GitHub Project Kanban board to plan, organise and track the progress of the secured multi-site network project. The board was divided into Todo, In Progress and Done sections so that the status of each task could be clearly monitored throughout the project. This matches the assessment requirement to use a GitHub Project for planning and task tracking. a2-secured-multisite-network-pr…
+The tasks included building each member’s GNS3 site, configuring IP addressing, Tailscale, Kerberos, OPNsense firewall rules, the site-to-site VPN, Suricata IDS, packet-capture evidence, the wireless security section and final documentation. Tasks were moved between the columns as work progressed.
+The Kanban board also helped divide responsibilities between the group members and made individual contribution easier to identify. GitHub Project activity can be used as one source of evidence when assessing each member’s contribution to the project.
+
+Figure: GitHub Project Kanban board showing the planning and progress of the secured multi-site network project.
