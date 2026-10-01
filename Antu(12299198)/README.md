@@ -18,68 +18,63 @@ A simple web server was configured on the DMZ host using Python on port 80. The 
 # Task 4 - LAN Host Connectivity Test
 The LAN host was used to ping the OPNsense LAN interface at 10.10.1.1. The successful replies with 0% packet loss confirmed connectivity between the LAN host and the firewall.
 <img width="1920" height="1080" alt="Firefox ping for the opnsense" src="https://github.com/user-attachments/assets/5a71dd22-ab28-4bd7-b1c9-8879a12af750" />
-# Task 4 - LAN Firewall Rules
+# Task 5 - LAN Firewall Rules
 Five firewall rules were configured on the LAN interface to control traffic from the LAN network. The rules permit selected services such as HTTP, HTTPS, DNS and SSH while restricting other traffic.
 <img width="1920" height="1080" alt="LAN 5 rules" src="https://github.com/user-attachments/assets/def73a2c-f30c-4f91-965b-99e9c6681dc8" />
-# task 5 - WAN Firewall Rule
+# task 6 - WAN Firewall Rule
 A WAN firewall rule was configured to permit IPv4 TCP traffic to the DMZ web server on port 80. This allows authorised HTTP access to the web server while other unsolicited WAN traffic remains restricted.
 <img width="1920" height="1080" alt="WAN RULES" src="https://github.com/user-attachments/assets/94ef3f4a-9fce-4786-ab06-58b6d330b016" />
-# Task 6 - OPT1/DMZ Firewall Rules
+# Task 7 - OPT1/DMZ Firewall Rules
 Firewall rules were configured on the OPT1 interface for the DMZ network. DNS traffic was permitted while other traffic was blocked to restrict unnecessary communication from the DMZ.
 <img width="1813" height="1080" alt="OPT1 RULES" src="https://github.com/user-attachments/assets/ffa9fb9b-fe7f-4e9e-b34b-0a3599ac26f9" />
-# Task 7 - WAN Interface Configuration
+# Task 8 - WAN Interface Configuration
 The OPNsense WAN interface was enabled and configured with a static IPv4 configuration. The private and bogon network blocking options were left unticked for the laboratory network environment.
 <img width="1920" height="1080" alt="unticked firefox block" src="https://github.com/user-attachments/assets/c4c84156-2db7-45c7-890e-07e96616cf93" />
-# Task 8 - LAN Access to DMZ Web Server
+# Task 9 - LAN Access to DMZ Web Server
 The configured LAN firewall rule was tested by accessing the DMZ web server at 10.12.1.20. The successful response confirmed that HTTP traffic from the LAN to the DMZ web server was permitted.
 <img width="1920" height="1080" alt="LAN rule 1 permits" src="https://github.com/user-attachments/assets/5505c106-5a89-46dd-a59a-96f2eaf231b1" />
-# Task 9 - LAN Block Rule – Live View
+# Task 10 - LAN Block Rule – Live View
 The OPNsense firewall Live View was used to verify blocked LAN traffic. The red log entries show ICMP traffic being blocked, confirming that the firewall rule was operating correctly.
 <img width="1920" height="1080" alt="LAN rule block live view" src="https://github.com/user-attachments/assets/db65c317-c0b5-4c38-85ca-2309858c95c3" />
-# Task 10 - WAN Interface Preparation
+# Task 11 - WAN Interface Preparation
 The WAN interface was configured for the private lab network. The private-network and bogon-network blocking options were disabled so that communication using the 10.0.0.0/8 addressing range could pass between the OPNsense firewalls.
 
 <img width="1020" height="574" alt="image" src="https://github.com/user-attachments/assets/eea31bcf-3c26-47a9-ab4e-821a313e18f5" />
 
-# Task 11 - WAN Firewall Rule Configuration
+# Task 12 - WAN Firewall Rule Configuration
 A WAN firewall rule was configured to permit the required inbound HTTP traffic to the DMZ web server. This provides controlled access to the web service while keeping the rule specific to the required destination and port.
 
 <img width="1020" height="574" alt="image" src="https://github.com/user-attachments/assets/da69ee08-887e-46ca-a20e-7033d33751ba" />
 
-# Task 12 - OPT1 / DMZ Firewall Rule Configuration
+# Task 13 - OPT1 / DMZ Firewall Rule Configuration
 The OPT1 interface rules were configured to control DMZ traffic. The screenshot shows the permitted DNS traffic and the additional rule used to manage traffic entering through the DMZ interface.
 
 <img width="1020" height="608" alt="image" src="https://github.com/user-attachments/assets/9050e83a-245e-44b5-90ed-271b5f4a82ad" />
 
-# Task 13 - IPsec Tunnel Established on OPNsense1
+# Task 14 - IPsec Tunnel Established on OPNsense1
 The IPsec status page on OPNsense1 confirms that the IKEv2 tunnel is established between 10.0.1.1 and 10.0.1.2. Phase 2 is installed for communication between the 10.10.1.0/24 and 10.13.1.0/24 networks.
 
 <img width="1020" height="574" alt="image" src="https://github.com/user-attachments/assets/2b69f471-0f1f-4b58-a5f4-43a871d6ae36" />
 
-# Task 14 - IPsec Tunnel Established on OPNsense2
+# Task 15 - IPsec Tunnel Established on OPNsense2
 The IPsec status page on OPNsense2 confirms the same tunnel from the remote side. The Phase 2 entry shows the 10.13.1.0/24 local network and 10.10.1.0/24 remote network in the INSTALLED state.
 
 <img width="1020" height="574" alt="image" src="https://github.com/user-attachments/assets/79e85abc-cb58-4178-8c72-09347ecc5ff4" />
 
-# Task 15 - IPsec Firewall Rule on OPNsense1
+# Task 16 - IPsec Firewall Rule on OPNsense1
 An IPsec firewall rule was added on OPNsense1 to allow IPv4 traffic arriving from the remote 10.13.1.0/24 network to the local 10.10.1.0/24 network.
 
 <img width="1020" height="574" alt="image" src="https://github.com/user-attachments/assets/c4a7e75a-be8a-4b23-8279-adb2c03c4744" />
 
-# Task 16 - IPsec Firewall Rule on OPNsense2
+# Task 17 - IPsec Firewall Rule on OPNsense2
 The corresponding IPsec firewall rule was added on OPNsense2 to allow IPv4 traffic from 10.10.1.0/24 to 10.13.1.0/24. This completes the bidirectional policy for the site-to-site tunnel.
 
 <img width="1020" height="574" alt="image" src="https://github.com/user-attachments/assets/6bfdb428-b742-4c01-a3d9-e9b8ec0814e5" />
 
-# Task 17 - Inter-Site Connectivity Verification
+# Task 18 - Inter-Site Connectivity Verification
 Connectivity was tested from Host1 to the remote 10.13.1.0/24 network. Successful replies from 10.13.1.10, 10.13.1.20 and the remote gateway 10.13.1.1 confirm that routing, IPsec and firewall rules are operating correctly.
 
 <img width="1020" height="574" alt="image" src="https://github.com/user-attachments/assets/38a250d3-2803-4404-ab4d-6d16c2ff5d5e" />
-
-# Task 18 - Tailscale / Remote Site Connectivity Test
-Remote site connectivity was also verified using the VPN routing environment. Successful ICMP replies from hosts in other 10.13.x networks demonstrate that the VPN router can reach the advertised remote subnets.
-
-<img width="1020" height="574" alt="image" src="https://github.com/user-attachments/assets/de3dcfa0-9014-4775-bae1-96b02c554ed5" />
 
 # Task 19 - Suricata Base Configuration
 Suricata was configured with HOME_NET covering the private laboratory address ranges. This allows the IDS to treat internal traffic as protected network traffic and apply the detection rules correctly.
@@ -146,3 +141,13 @@ Wireshark was used to capture traffic generated during the authentication proces
 A kerberos display filter was applied in Wireshark to isolate Kerberos traffic. The capture shows important Kerberos messages including AS-REQ, AS-REP, TGS-REQ and TGS-REP. The AS exchange demonstrates the client obtaining its initial authentication ticket, while the TGS exchange demonstrates the client requesting and receiving a service ticket. This confirms that the Kerberos ticket-based authentication process was operating successfully.
 
 <img width="1920" height="1080" alt="capture of kerberos-2" src="https://github.com/user-attachments/assets/457c79f3-6db2-4c47-97cb-7096f88db421" />
+
+# Task 32 - Tailscale VPN Connection
+The Tailscale admin console shows that all three VPN routers were successfully connected to the same Tailnet. Each router received its own Tailscale IP address and was shown as Connected. The subnet labels also confirm that subnet routing was enabled, allowing communication between the different project sites through the Tailscale VPN.
+
+<img width="1920" height="1040" alt="tailescale home page" src="https://github.com/user-attachments/assets/040fc00c-a7ad-4207-ab0a-e2a5aae9073f" />
+
+# Task 33 - Tailscale / Remote Site Connectivity Test
+Remote site connectivity was also verified using the VPN routing environment. Successful ICMP replies from hosts in other 10.13.x networks demonstrate that the VPN router can reach the advertised remote subnets.
+
+<img width="1920" height="1040" alt="{70AFF21B-D4E5-443A-8C1D-B11F7F2E5DD7}" src="https://github.com/user-attachments/assets/b6dd8481-82ca-4254-a9e7-2009034f09f6" />
