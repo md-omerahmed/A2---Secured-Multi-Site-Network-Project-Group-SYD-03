@@ -143,7 +143,37 @@
 
 <img width="1920" height="1080" alt="{8C3DED52-32C7-453E-B4AF-0A11B111EB35}" src="https://github.com/user-attachments/assets/23e9938f-4fde-4b6f-8021-706a8182fbdb" />
 
+# KDC Server – DNS and Connectivity Verification
+# Configured the KDC server’s /etc/hosts file with hostname-to-IP mappings for the KDC, server, client, and OPNsense hosts. I then tested connectivity by pinging client.example.com from the KDC server. The successful replies with 0% packet loss confirmed that hostname resolution and network connectivity between the KDC and client were working correctly.
+<img width="940" height="496" alt="image" src="https://github.com/user-attachments/assets/290df722-7c21-408c-8b8e-15ea3204706c" />
+# Kerberos Server – Connectivity and Keytab Verification
+## Verified connectivity from the server to both the client and KDC using ping tests with 0% packet loss. I then downloaded the server.keytab file from the KDC and used klist -k to confirm that the required Kerberos service principals were successfully stored in the keytab.
+<img width="940" height="503" alt="image" src="https://github.com/user-attachments/assets/8497a5c7-4ef6-4140-8aa0-5dd3d52fd7b3" />
+# KDC – Kerberos Principal and Keytab Configuration
+## Initialized the Kerberos database for the EXAMPLE.COM realm and started the KDC services. I then created the admin, host/server, and host/client principals and generated the server.keytab. Finally, I used listprincs to verify that all required Kerberos principals were successfully created.
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/39a0c2eb-8152-4bfb-b439-91e0008e1f2d" />
+# Kerberos Client – Authentication Verification
+## Authenticated the user tahsin@EXAMPLE.COM using the kinit command. I then used klist to verify that a valid Kerberos Ticket Granting Ticket (TGT) was successfully issued by the KDC, confirming that Kerberos client authentication was working correctly.
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/fa00e3b6-1de1-445e-b6b6-c91293bc7e98" />
+
+# Kerberos SSH – Passwordless Authentication Verification
+## Successfully authenticated with Kerberos using kinit and verified the valid ticket with klist. I then connected from the client to server.example.com using SSH with GSSAPI/Kerberos authentication, without entering the server account password. The final test with password authentication disabled confirmed that access was provided through Kerberos authentication rather than a password.
+<img width="940" height="417" alt="image" src="https://github.com/user-attachments/assets/1029ae0d-7e55-48c2-a451-5b53ef936646" />
+
+# Kerberos Traffic Capture – Wireshark Verification
+## Captured the Kerberos authentication traffic using Wireshark. The capture shows Kerberos packets, including TGS-REQ and TGS-REP, exchanged between the client and KDC. This provides network-level evidence that the client requested and received a service ticket as part of the Kerberos authentication process.
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/e5ed563f-b7ab-4e45-a03b-4777c48bd2d6" />
+
+# Kerberos Protocol – Wireshark Analysis
+## Applied the kerberos display filter in Wireshark to isolate Kerberos traffic. The capture clearly shows AS-REQ/AS-REP and TGS-REQ/TGS-REP exchanges between the client and KDC, confirming successful ticket-based Kerberos authentication and service ticket exchange.
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/e00f35c4-14a7-4bf5-8e26-616039a8a946" />
+
+# Tailscale Inter-Site Connectivity Verification
+## Established a Tailscale connection between my site and my teammate Antu’s site. I then tested cross-site connectivity using ping, and the successful replies with 0% packet loss confirmed that both sites were securely connected and able to communicate through the Tailscale VPN.
 <img width="940" height="417" alt="image" src="https://github.com/user-attachments/assets/f1514e37-d4b3-4a8b-8552-c103875c6515" />
+
+# SSH Server – GSSAPI Configuration
+## Configured the SSH server to support Kerberos/GSSAPI authentication by enabling GSSAPIAuthentication and GSSAPICleanupCredentials in sshd_config. I also verified the server keytab file and restarted the SSH service to apply the configuration.
 <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/75dbb999-64db-4b0b-beb0-d7edbc2f84b1" />
 
 
