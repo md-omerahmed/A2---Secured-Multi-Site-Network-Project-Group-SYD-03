@@ -32,3 +32,6 @@ The tasks included building each member’s GNS3 site, configuring IP addressing
 The Kanban board also helped divide responsibilities between the group members and made individual contribution easier to identify. GitHub Project activity can be used as one source of evidence when assessing each member’s contribution to the project.
 <img width="1920" height="997" alt="{8BA7E0C5-245B-49E3-AF8B-137D84286588}" src="https://github.com/user-attachments/assets/2cc4fa89-e4a8-4421-a6bb-872606e3a763" />
 Figure: GitHub Project Kanban board showing the planning and progress of the secured multi-site network project.
+
+# The whole project was done by us in our CQU Lab and we did it together.
+<img width="4032" height="3024" alt="IMG_2465" src="https://github.com/user-attachments/assets/71255de1-996d-450b-be78-93e7943e9f61" />
