@@ -41,6 +41,70 @@
 <img width="1917" height="980" alt="19 network week 6" src="https://github.com/user-attachments/assets/5a848266-67b3-4763-aa6e-c37644e09e8a" />
 <img width="1909" height="984" alt="Topology Diagram" src="https://github.com/user-attachments/assets/e2cd67ea-42dc-4db3-99f4-16e5149e7e19" />
 
+# Kerberos Authentication Report
+This activity demonstrates Kerberos-based authentication in GNS3. The purpose is to configure a Key Distribution Centre (KDC) so that a client can obtain a Kerberos ticket and use it to log in to an SSH server without entering the SSH password.
+
+# Network Topology and Addressing
+The topology consists of three Kerberos hosts connected through an Ethernet switch: KDC, Server, and Client. Each device is configured with a fully qualified domain name because Kerberos relies heavily on hostname resolution rather than only IP addresses.
+
+KDC	    kdc.example.com	    10.11.2.10/24   Issues Kerberos tickets
+Server	server.example.com	10.11.2.20/24	  SSH server
+Client	client.example.com	10.11.2.30/24	  Requests tickets and SSH login
+
+# Server Keytab and SSH Configuration
+The server keytab was successfully installed and verified. The keytab contained the Kerberos principal for host/server.example.com@EXAMPLE.COM. GSSAPI authentication was also enabled in the SSH configuration, and the Kerberos-compatible SSH service was started.
+The screenshot also shows some troubleshooting while configuring the local omer account and checking system files. These steps were part of preparing the server for Kerberos-based SSH authentication.
+<img width="940" height="498" alt="image" src="https://github.com/user-attachments/assets/5b491627-7d06-45c4-8158-539220273c3e" />
+Figure:  Server keytab verification, GSSAPI configuration and SSH server preparation.
+
+# KDC Database and Principal Configuration
+The Kerberos database was created for the EXAMPLE.COM realm and the KDC services were started successfully.
+Using the Kerberos administration interface, the required principals were created for the user and participating hosts. The server's host principal was then exported to /tmp/server.keytab. The screenshot also shows the keytab being made available through a temporary HTTP server so that it could be transferred to the SSH server.
+<img width="940" height="486" alt="image" src="https://github.com/user-attachments/assets/55ba87d6-0e1b-4968-a48d-17692f35d2a6" />
+Figure: Kerberos KDC configuration, principal creation and server keytab generation.
+
+# Client Ticket and Kerberos SSH Authentication
+On the client, Kerberos authentication was tested using the user principal omer@EXAMPLE.COM.
+The screenshot shows several authentication attempts during troubleshooting. Initially, SSH access was denied because the required Kerberos credentials were not yet available or correctly configured.
+After successfully obtaining a Kerberos Ticket Granting Ticket, klist displayed the principal:
+omer@EXAMPLE.COM
+with the Ticket Granting Ticket:
+krbtgt/EXAMPLE.COM@EXAMPLE.COM
+The client was then able to connect successfully to server.example.com, and the Welcome to Alpine! message confirms that the SSH session was established.
+<img width="940" height="479" alt="image" src="https://github.com/user-attachments/assets/644c2b42-dcee-4ed0-bf2a-43ae4c5b0d3f" />
+Figure: Kerberos ticket acquisition and successful SSH authentication from the client.
+
+# Service Ticket Verification and Authentication Test
+After the successful SSH connection, the client's ticket cache was checked again.
+The screenshot shows two important Kerberos tickets:
+- krbtgt/EXAMPLE.COM@EXAMPLE.COM
+- host/server.example.com@EXAMPLE.COM
+The first is the Ticket Granting Ticket, while the second is the service ticket issued specifically for accessing the SSH server.
+The Kerberos tickets were then removed using kdestroy. After the credentials were destroyed, another Kerberos-only SSH attempt was made and access was denied with a Permission denied message.
+This confirms that the earlier successful SSH login depended on the Kerberos ticket rather than password authentication.
+<img width="940" height="455" alt="image" src="https://github.com/user-attachments/assets/ab6b140f-ba88-432a-92c4-9c20e858b1c9" />
+Figure: Kerberos service ticket verification and failed SSH authentication after ticket destruction.
+
+# Wireshark Packet Capture
+Wireshark was used to capture traffic between the Kerberos systems. The unfiltered capture shows communication between:
+- Client: 10.10.2.50
+- KDC: 10.10.2.30
+- Server: 10.10.2.40
+The capture also shows normal SSH/TCP communication between the client and server. 
+<img width="940" height="495" alt="image" src="https://github.com/user-attachments/assets/fdc36af5-7a7f-4253-b797-d81c6e83f572" />
+Figure: Network traffic generated during Kerberos authentication and SSH communication.
+
+# Kerberos Packet Analysis
+The Wireshark display was filtered using Kerberos, allowing the authentication packets to be clearly identified.
+The screenshot contains several important Kerberos messages, including:
+AS-REQ – Authentication request sent from the client to the KDC.
+AS-REP – KDC response containing information required for the client's Ticket Granting Ticket.
+TGS-REQ – Request for a service-specific ticket.
+TGS-REP – KDC response containing the service ticket.
+The traffic is primarily between 10.10.2.50 and 10.10.2.30, confirming communication between the client and KDC. week 5 network
+<img width="940" height="496" alt="image" src="https://github.com/user-attachments/assets/55f93b8b-5999-44a3-b245-f44478e8c4d3" />
+Figure: AS-REQ, AS-REP, TGS-REQ and TGS-REP Kerberos packets captured in Wireshark.
+
 # OPNsense Firewall Report
 This activity focused on building a segmented network using OPNsense with separate WAN, LAN, and DMZ zones. Firewall rules were configured to control communication between the zones and ensure that only permitted traffic could pass.
 
