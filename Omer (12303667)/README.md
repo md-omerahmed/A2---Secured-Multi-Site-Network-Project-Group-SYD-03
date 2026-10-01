@@ -177,3 +177,19 @@ The final Suricata logs confirmed that both custom detection rules were function
 The eve.json output also contained detailed information about the detected event, including source and destination addresses, protocol information, HTTP details, and alert information. The activity explains that fast.log provides a quick one-line alert summary, whereas eve.json provides more detailed structured event information. suricata-basics-instructions
 <img width="1919" height="997" alt="10 network week 8" src="https://github.com/user-attachments/assets/9ed83655-eccb-4152-b6a9-07d8afac9692" />
 Figure 10: Suricata fast.log and eve.json confirming successful detection of the BadBot User-Agent and port 4444 traffic.
+
+# Tailscale Report
+Tailscale Connectivity
+Tailscale was used to connect the separate branch sites and create communication between the group members’ networks. Each site used a different IP range so that there were no addressing conflicts, and the Tailscale routers were used to advertise the local network routes. This allowed devices from one site to communicate with devices at another site and supported the required federated multi-site network. a2-secured-multisite-network-pr…
+After the connection was configured, cross-site connectivity was tested to confirm that traffic could successfully travel between the different branch networks. Tailscale also provided the connectivity needed for services such as Kerberos authentication to work across sites. The assessment separately requires a site-to-site VPN, so Tailscale was used for interconnecting the sites rather than replacing the VPN requirement.
+
+Figure: Tailscale connection between the branch sites.
+
+# Overall Reflection
+This project helped me understand how different network security technologies work together in a real multi-site environment. Instead of working with each security tool separately, we had to combine services such as Kerberos, OPNsense firewalls, Tailscale, site-to-site VPNs and Suricata into one secured network. This made me understand the importance of defence-in-depth, where several security controls protect the network rather than relying on only one layer.
+
+One of the main challenges was connecting the separate sites and making sure that routing, firewall rules and IP addressing worked correctly. Troubleshooting connectivity problems helped me improve my understanding of network routes, gateways and firewall behaviour. Configuring Kerberos also helped me understand how centralised authentication can be used across different sites. Packet captures were particularly useful because they allowed us to see the difference between normal traffic and encrypted VPN traffic and provided evidence that the security controls were actually working. 
+
+Working as a group also improved my teamwork and project-management skills. We used GitHub, a Kanban board and shared project files to organise the work and keep track of our progress. This helped us divide responsibilities and understand the importance of documenting individual contributions. 
+
+Overall, this project improved both my technical and practical networking skills. I became more confident with network security configuration, troubleshooting, authentication, VPNs, intrusion detection and security documentation. It also showed me that building a secure network is not only about making devices communicate, but also about controlling access, monitoring traffic, protecting data and providing clear evidence that the security design works.
