@@ -30,5 +30,5 @@ The wireless portion of this assessment is merely a design discussion. We will N
 The group used a GitHub Project Kanban board to plan, organise and track the progress of the secured multi-site network project. The board was divided into Todo, In Progress and Done sections so that the status of each task could be clearly monitored throughout the project. This matches the assessment requirement to use a GitHub Project for planning and task tracking. a2-secured-multisite-network-pr…
 The tasks included building each member’s GNS3 site, configuring IP addressing, Tailscale, Kerberos, OPNsense firewall rules, the site-to-site VPN, Suricata IDS, packet-capture evidence, the wireless security section and final documentation. Tasks were moved between the columns as work progressed.
 The Kanban board also helped divide responsibilities between the group members and made individual contribution easier to identify. GitHub Project activity can be used as one source of evidence when assessing each member’s contribution to the project.
-
+<img width="1920" height="997" alt="{8BA7E0C5-245B-49E3-AF8B-137D84286588}" src="https://github.com/user-attachments/assets/2cc4fa89-e4a8-4421-a6bb-872606e3a763" />
 Figure: GitHub Project Kanban board showing the planning and progress of the secured multi-site network project.
