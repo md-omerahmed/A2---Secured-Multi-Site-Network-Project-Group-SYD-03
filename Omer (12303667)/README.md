@@ -189,6 +189,7 @@ figure: Commands for tailscale and tailscale homepage
 
 # Connectivity test from Omer site to Tahsin site
 <img width="1880" height="992" alt="{DF97A582-8DA9-44E8-87EB-13FFE44F1443}" src="https://github.com/user-attachments/assets/5d7f9b65-1133-4932-b0c1-39e9fb2a1875" />
+
 # Connectivity test from omer site to antu site
 <img width="1908" height="981" alt="{BF4C8349-B1CA-4123-8F8B-ECC7FA39F784}" src="https://github.com/user-attachments/assets/7b7b80f7-a953-4c7a-878e-003d6d512d09" />
 
