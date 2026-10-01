@@ -33,5 +33,11 @@ The Kanban board also helped divide responsibilities between the group members a
 <img width="1920" height="997" alt="{8BA7E0C5-245B-49E3-AF8B-137D84286588}" src="https://github.com/user-attachments/assets/2cc4fa89-e4a8-4421-a6bb-872606e3a763" />
 Figure: GitHub Project Kanban board showing the planning and progress of the secured multi-site network project.
 
-# The whole project was done by us in our CQU Lab and we did it together.
+# Group Communication and Collaboration
+Our group worked together regularly, so most of our communication was done face-to-face instead of through Microsoft Teams. During these meetings, we discussed the network design, divided tasks, tested configurations, and solved technical problems together.
+
+Although the specification mentions using Microsoft Teams for communication, our group mainly relied on in-person collaboration because we were able to meet and work together directly.
+
+We also have evidence of our teamwork through GitHub commits, the Kanban board, project files, screenshots, and other group activity. These show that all members contributed to the project.
+
 <img width="4032" height="3024" alt="IMG_2465" src="https://github.com/user-attachments/assets/71255de1-996d-450b-be78-93e7943e9f61" />
