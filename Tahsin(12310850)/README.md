@@ -176,7 +176,8 @@
 ## Configured the SSH server to support Kerberos/GSSAPI authentication by enabling GSSAPIAuthentication and GSSAPICleanupCredentials in sshd_config. I also verified the server keytab file and restarted the SSH service to apply the configuration.
 <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/75dbb999-64db-4b0b-beb0-d7edbc2f84b1" />
 
-
+# Successful pinging from Site A to Site B
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/3bbc87db-110a-4bf6-a219-6eb55d0dd198" />
 
 
 
