@@ -1,5 +1,5 @@
 # Topology Overview
-The topology represents a secured multi-site network built in GNS3 for the COIT12202 Secured Multi-Site Network Project. The assessment requires each member to build a site, connect the sites into a federated network, and apply multiple security controls such as Kerberos, OPNsense firewalls, VPN connectivity, and intrusion detection.
+The topology represents a secured multi-site network built in GNS3 for the COIT12202 Secured Multi-Site Network Project.Each member has build a site, connect the sites into a federated network, and apply multiple security controls such as Kerberos, OPNsense firewalls, VPN connectivity, and intrusion detection.
 <img width="1919" height="1002" alt="{A25B73DB-B29F-487B-8739-609341D80FA3}" src="https://github.com/user-attachments/assets/d56fcb4e-4968-460c-acdc-4e382f1d0714" />
 Figure: Secured multi-site GNS3 network topology.
 
