@@ -1,45 +1,7 @@
-# Topology
-<img width="1919" height="1031" alt="image" src="https://github.com/user-attachments/assets/92e56fbf-d88e-4f37-adc4-44d25ffb182e" />
-
-
-
-# Assessment 2 (1)
-
-<img width="1919" height="1079" alt="Screenshot 2026-08-12 114513" src="https://github.com/user-attachments/assets/0d91e167-bcbe-4f0d-9cdb-fb010967dea7" />
-<img width="1919" height="1079" alt="Screenshot 2026-08-12 114919" src="https://github.com/user-attachments/assets/40c285cb-c2a9-442c-9e79-d4af9c97d7a1" />
-<img width="1919" height="1079" alt="Screenshot 2026-08-12 115127" src="https://github.com/user-attachments/assets/f6935b77-2b88-4a91-aab7-7bb52853277b" />
-<img width="1919" height="1078" alt="Screenshot 2026-08-12 120042" src="https://github.com/user-attachments/assets/6a73b3c1-aa5b-4c53-86dd-d124b70e2769" />
-<img width="1919" height="1079" alt="Screenshot 2026-08-12 120107" src="https://github.com/user-attachments/assets/80f83261-7410-48d3-a979-11ea3845b635" />
-<img width="1919" height="1079" alt="Screenshot 2026-08-12 120730" src="https://github.com/user-attachments/assets/5ed4a84b-043c-4052-854f-4a75f3355eba" />
-<img width="1919" height="1078" alt="Screenshot 2026-08-12 121452" src="https://github.com/user-attachments/assets/ca46c243-9005-4ee6-9af5-db9bbb5e87e8" />
-<img width="1919" height="1079" alt="Screenshot 2026-08-12 121945" src="https://github.com/user-attachments/assets/30a4ce33-45c7-43a2-91a4-810e92bc28fa" />
-<img width="1919" height="1076" alt="Screenshot 2026-08-12 122304" src="https://github.com/user-attachments/assets/002fffda-8e80-428b-8395-34c1ba41b399" />
-<img width="1919" height="1079" alt="Screenshot 2026-08-12 123129" src="https://github.com/user-attachments/assets/dd8a5abd-ab80-4531-90ab-3b3e7df13042" />
-
-# Assessment 2 (2)
-<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/6278c4e5-b38d-484d-86c2-4a7ab53393a4" />
-<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/963976b9-9e38-4bbd-8e3c-f8c5d376a3c4" />
-<img width="940" height="558" alt="image" src="https://github.com/user-attachments/assets/633179bd-cd20-4ffa-95ed-c02df5e9dda2" />
-<img width="940" height="605" alt="image" src="https://github.com/user-attachments/assets/bb905a51-3601-42cf-bc45-84a289e35c17" />
-<img width="940" height="562" alt="image" src="https://github.com/user-attachments/assets/49fc982d-1f60-4d3b-be43-b7e9ccb27872" />
-<img width="940" height="676" alt="image" src="https://github.com/user-attachments/assets/82c859ad-f25a-41c4-b01e-edd260328a73" />
-
-# Assessment 2 (3)
-<img width="1918" height="1009" alt="1 network week 6" src="https://github.com/user-attachments/assets/800c9462-16a4-4a32-ac72-020c403602ce" />
-<img width="1914" height="982" alt="2 network week 6" src="https://github.com/user-attachments/assets/c3a2135b-8dd3-4b13-9199-ed6de5d4d330" />
-<img width="1919" height="1079" alt="3 week 3 network" src="https://github.com/user-attachments/assets/d6004056-900f-461b-80f9-835ef551d4f4" />
-<img width="1916" height="966" alt="4 network week 6" src="https://github.com/user-attachments/assets/e333584d-80b6-4fe6-a070-dfdcd39669a1" />
-<img width="1909" height="980" alt="5 network week  6" src="https://github.com/user-attachments/assets/456b43ef-1112-4b5a-b538-78280e8d35c5" />
-<img width="1919" height="1079" alt="6 week 3 network" src="https://github.com/user-attachments/assets/468b678b-15d1-4fc3-a590-846e21fde1a2" />
-<img width="1913" height="945" alt="7 network week 6" src="https://github.com/user-attachments/assets/c643e75d-8fee-4b9b-92bc-b446119d0e3f" />
-<img width="1899" height="948" alt="10 network week 6" src="https://github.com/user-attachments/assets/3d1679c5-32d4-4da3-a6fd-e1a4f88ed4d0" />
-<img width="1913" height="988" alt="20 network week 6" src="https://github.com/user-attachments/assets/b41495ac-365b-457b-9ea3-61eb8ba5118c" />
-<img width="1908" height="965" alt="13 network week 6" src="https://github.com/user-attachments/assets/90ec9158-0150-4950-8f3b-ca5dc059881d" />
-<img width="1917" height="974" alt="14 network week 6" src="https://github.com/user-attachments/assets/9e1b4fc0-e457-432e-b65a-566e4a702faa" />
-<img width="1916" height="956" alt="15 network week 6" src="https://github.com/user-attachments/assets/8c313b93-546b-427f-ada3-90266c5db02b" />
-<img width="1906" height="971" alt="16 network week 6" src="https://github.com/user-attachments/assets/9fa2311f-0313-4fd3-b765-cb8c8df5bbaa" />
-<img width="1917" height="980" alt="19 network week 6" src="https://github.com/user-attachments/assets/5a848266-67b3-4763-aa6e-c37644e09e8a" />
-<img width="1909" height="984" alt="Topology Diagram" src="https://github.com/user-attachments/assets/e2cd67ea-42dc-4db3-99f4-16e5149e7e19" />
+# Topology Overview
+The topology represents a secured multi-site network built in GNS3 for the COIT12202 Secured Multi-Site Network Project. The assessment requires each member to build a site, connect the sites into a federated network, and apply multiple security controls such as Kerberos, OPNsense firewalls, VPN connectivity, and intrusion detection.
+<img width="1919" height="1002" alt="{A25B73DB-B29F-487B-8739-609341D80FA3}" src="https://github.com/user-attachments/assets/d56fcb4e-4968-460c-acdc-4e382f1d0714" />
+Figure: Secured multi-site GNS3 network topology.
 
 # Kerberos Authentication Report
 This activity demonstrates Kerberos-based authentication in GNS3. The purpose is to configure a Key Distribution Centre (KDC) so that a client can obtain a Kerberos ticket and use it to log in to an SSH server without entering the SSH password.
@@ -105,10 +67,28 @@ The traffic is primarily between 10.10.2.50 and 10.10.2.30, confirming communica
 <img width="940" height="496" alt="image" src="https://github.com/user-attachments/assets/55f93b8b-5999-44a3-b245-f44478e8c4d3" />
 Figure: AS-REQ, AS-REP, TGS-REQ and TGS-REP Kerberos packets captured in Wireshark.
 
+# Firewalls & Network Defence
+OPNsense firewall rules were configured on the different interfaces to control traffic moving through the network. Separate rules were applied to the LAN, DMZ and WAN interfaces so that only required traffic could pass between network zones.
+The LAN rules were used to control traffic generated from trusted internal devices. These rules allowed necessary communication from the LAN to other permitted networks and services.
+The DMZ rules were configured to control traffic from systems located in the DMZ. This helped keep publicly accessible or less-trusted systems separated from the internal LAN.
+The WAN rules controlled traffic entering from the external or transit network. Only required traffic was permitted, while unnecessary or unauthorised traffic was blocked.
+Using separate firewall rules for each interface creates clear trust boundaries and supports the defence-in-depth security approach used in the project. The assignment specifically requires OPNsense security zones and appropriate firewall rules as part of the secured multi-site network. a2-secured-multisite-network-pr…
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/6278c4e5-b38d-484d-86c2-4a7ab53393a4" />
+Figure – OPNsense LAN firewall rules controlling traffic from the trusted internal network.
+<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/963976b9-9e38-4bbd-8e3c-f8c5d376a3c4" />
+Figure – OPNsense DMZ firewall rules controlling traffic from the DMZ network.
+<img width="940" height="605" alt="image" src="https://github.com/user-attachments/assets/bb905a51-3601-42cf-bc45-84a289e35c17" />
+Figure – OPNsense WAN firewall rules controlling incoming traffic from the external or transit network.
+
+The OPNsense firewall live log was used to monitor traffic passing through the firewall and identify packets that were blocked by the configured security rules.
+The log provides information such as the source address, destination address, protocol, interface and whether the packet was passed or blocked. This was useful during testing because it helped identify when traffic was being denied by the firewall.
+The blocked traffic shown in the live log demonstrates that the firewall rules were actively enforcing the configured security policy rather than allowing unrestricted network communication.
+This provides evidence that traffic outside the permitted rules was prevented from crossing the network trust boundaries.
+<img width="1906" height="971" alt="16 network week 6" src="https://github.com/user-attachments/assets/9fa2311f-0313-4fd3-b765-cb8c8df5bbaa" />
+Figure – OPNsense firewall live log showing traffic blocked by the configured firewall policy.
+
 # OPNsense Firewall Report
 This activity focused on building a segmented network using OPNsense with separate WAN, LAN, and DMZ zones. Firewall rules were configured to control communication between the zones and ensure that only permitted traffic could pass.
-
-
 
 # WireGuard VPN Report
 This activity focused on configuring and verifying a site-to-site VPN connection between two networks. The screenshots show the VPN configuration in the firewall interface, tunnel status information, command-line verification, and packet capture evidence.
